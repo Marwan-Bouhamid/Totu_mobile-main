@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gestion des Catégories</title>
+</head>
+<body>
+
+<h1>Gestion des Catégories</h1>
+
+<button id="btnAjouter">+ Ajouter une catégorie</button>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Couleur</th>
+            <th>Icône</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody id="categoriesTableBody">
+        <!-- Les lignes seront injectées ici par JS -->
+    </tbody>
+</table>
+
+<div id="formContainer">
+    <h2 id="formTitle">Nouvelle catégorie</h2>
+    <form id="categorieForm">
+        <label for="nom">Nom</label><br>
+        <input type="text" id="nom" name="nom" required><br>
+
+        <label for="couleur">Couleur</label><br>
+        <input type="text" id="couleur" name="couleur" required><br>
+
+        <label for="icone">Icône</label><br>
+        <input type="text" id="icone" name="icone"><br>
+
+        <button type="submit">Enregistrer</button>
+        <button type="button" id="btnAnnuler">Annuler</button>
+    </form>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+sequenceDiagram
+    actor Auteur
+    participant Systeme as Système
+    Auteur->>Systeme: Saisit les informations et valide
+    alt Contenu renseigné et statut "Publié"
+        Systeme-->>Auteur: Enregistre l'article et le rend visible au public
+    else Contenu vide
+        Systeme-->>Auteur: Refuse et affiche "Le contenu est obligatoire"
+    else Statut "Brouillon" choisi
+        Systeme-->>Auteur: Enregistre l'article sans le rendre visible au public
+    end

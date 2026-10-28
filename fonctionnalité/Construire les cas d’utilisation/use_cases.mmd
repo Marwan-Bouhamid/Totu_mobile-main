@@ -1,0 +1,45 @@
+flowchart LR
+    Admin([" Administrateur"])
+    Auteur([" Auteur"])
+    Visiteur([" Visiteur"])
+
+    %% Administrateur use cases
+    UC1([Consulter les catégories])
+    UC2([Ajouter une catégorie])
+    UC3([Modifier une catégorie])
+    UC4([Supprimer une catégorie])
+    UC5([Créer un auteur])
+    UC6([Valider un article])
+    UC7([Publier un article])
+
+    %% Auteur use cases
+    UC8([Ajouter un article])
+    UC9([Modifier un article non publié])
+    UC10([Supprimer un article non publié])
+    UC11([Changer son profil])
+    UC12([Réinitialiser son mot de passe])
+
+    %% Visiteur use cases
+    UC13([Consulter les articles])
+
+    Admin --- UC1
+    Admin --- UC2
+    Admin --- UC3
+    Admin --- UC4
+    Admin --- UC5
+    Admin --- UC6
+    Admin --- UC7
+
+    Auteur --- UC8
+    Auteur --- UC9
+    Auteur --- UC10
+    Auteur --- UC11
+    Auteur --- UC12
+
+    Visiteur --- UC13
+
+    classDef actor fill:#ede9fe,stroke:#8b7cf6,stroke-width:1px,color:#4c1d95;
+    classDef usecase fill:#e6fffa,stroke:#14b8a6,stroke-width:1px,color:#134e4a;
+
+    class Admin,Auteur,Visiteur actor;
+    class UC1,UC2,UC3,UC4,UC5,UC6,UC7,UC8,UC9,UC10,UC11,UC12,UC13 usecase;

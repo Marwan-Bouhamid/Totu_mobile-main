@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<button id="btn-show-form">Ajouter une catégorie</button>
+
+<section id="section-form" hidden>
+    <form id="form-categorie">
+        <input type="text" id="cat-nom" placeholder="Nom de la catégorie" required>
+        <input type="text" id="cat-couleur" placeholder="Couleur" required>
+
+        <button type="submit">Enregistrer</button>
+        <button type="button" id="btn-cancel-form">Annuler</button>
+    </form>
+</section>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Couleur</th>
+        </tr>
+    </thead>
+    <tbody id="table-categories-body">
+    </tbody>
+</table>
+<script src="categorie.js"></script>
+</body>
+</html>

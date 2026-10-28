@@ -1,0 +1,15 @@
+```mermaid
+usecase-beta
+direction LR
+actor Admin("Coach")
+actor Auteur("workouts")
+actor visiteur("Group workouts")
+
+  system [ "FitnessApp"]
+
+
+Admin -- Crée des workouts -- system 
+Auteur --Consulte les worcouts publiés -- system
+visiteur -- Consulte group workouts -- system 
+
+```

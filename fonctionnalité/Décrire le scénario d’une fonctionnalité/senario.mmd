@@ -1,0 +1,8 @@
+sequenceDiagram
+    actor Auteur
+    participant Systeme as Système
+    Auteur->>Systeme: Demande l'ajout d'un article
+    Systeme-->>Auteur: Affiche le formulaire
+    Auteur->>Systeme: Saisit titre, catégorie, statut, image et contenu
+    Auteur->>Systeme: Clique sur "Enregistrer l'article"
+    Systeme-->>Auteur: Sauvegarde l'article et redirige vers la liste des articles
